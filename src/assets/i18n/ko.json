@@ -435,7 +435,7 @@
       "FORM": {
         "FILTER": "사용자 지정 필터",
         "FILTER_DESCRIPTION": "Https://docs.gitlab.com/ee/api/issues.html#list-issues 참조. 여러 개를 &로 결합할 수 있습니다.",
-        "FILTER_USER": "사용자명 (예: 혼자서 변경 사항을 필터링)",
+        "FILTER_USER": "사용자명",
         "GITLAB_BASE_URL": "맞춤 GitLab 기본 URL",
         "PROJECT": "전체 경로 또는 사용자명 / 프로젝트",
         "PROJECT_HINT": "예: 요하네스조/슈퍼생산성",
@@ -1337,11 +1337,11 @@
         "UNKNOWN_ERROR": "알 수 없는 동기화 오류: {{err}}"
       },
       "D_DECRYPT_ERROR": {
-        "BTN_OVER_WRITE_REMOTE": "원격 변경 및 덮어쓰기",
+        "BTN_OVER_WRITE_REMOTE": "서버 및 다른 기기 덮어쓰기",
         "CHANGE_PW_AND_DECRYPT": "복호화 재시도",
         "P1": "데이터가 암호화되어 암호 해독에 실패했습니다. 올바른 비밀번호를 입력하세요!",
         "P2_FORGOT_PW": "<strong>비밀번호를 잊으셨다면</strong>, 올바른 비밀번호를 입력하고 \"복호화 재시도\"를 클릭하세요.",
-        "P3_PW_CHANGED": "<strong>다른 기기에서 비밀번호를 변경하셨다면</strong>, 새 비밀번호를 입력하고 \"원격 덮어쓰기\"를 클릭하세요. 이렇게 하면 로컬 데이터가 서버에 업로드됩니다.",
+        "P3_PW_CHANGED": "<strong>다른 기기에서 비밀번호를 변경하셨다면</strong>, 새 비밀번호를 입력하고 \"서버 및 다른 기기 덮어쓰기\"를 클릭하세요. 이 작업은 이 기기의 로컬 사본으로 서버와 다른 기기의 모든 데이터를 덮어씁니다. 해당 기기에서 동기화하지 않은 변경사항은 사라집니다.",
         "PASSWORD": "암호",
         "TITLE": "복호화 실패"
       },
@@ -1845,7 +1845,7 @@
         "ISSUE": "이슈 링크",
         "LOCAL_ATTACHMENTS": "로컬 첨부파일",
         "NOTES": "노트",
-        "PARENT": "부모",
+        "PARENT": "상위 작업",
         "REMINDER": "알림",
         "REPEAT": "반복",
         "SCHEDULE_TASK": "작업 예약",
@@ -2018,7 +2018,7 @@
         "EMPTY_TITLE_VIA_APP_URI": "작업 제목이 비어 있어 작업을 추가하지 않았습니다",
         "FOUND_MOVE_FROM_BACKLOG": "기존 작업 <strong>{{title}}</strong> 을 (를) 현재 작업 목록으로 이동했습니다.",
         "FOUND_MOVE_FROM_OTHER_LIST": " <strong>{{contextTitle}}</strong> 의 작업 <strong>{{title}}</strong> 을 (를) 현재 목록에 추가했습니다.",
-        "FOUND_RESTORE_FROM_ARCHIVE": "보관함의 이슈와 관련된 복원된 작업 <strong>{{title}}</strong> ",
+        "FOUND_RESTORE_FROM_ARCHIVE": "보관함의 이슈와 관련된 복원된 작업 <strong>{{title}}</strong>",
         "GO_TO_TASK": "작업으로 이동",
         "INPUT_TOO_LONG_VIA_APP_URI": "작업 제목 또는 노트가 너무 깁니다",
         "MOVED_TO_ARCHIVE": " {{nr}} 작업을 보관으로 이동했습니다.",
@@ -2258,7 +2258,7 @@
         "TIME_UNASSIGNED": "아직 할당되지 않은 시간: {{time}}",
         "USE_REMAINING_TIME": "남은 시간 할당",
         "WARN_SIMPLE_COUNTER": "시간이 활성화된 간단한 카운터 버튼에 기록됩니다.",
-        "WARN_SIMPLE_COUNTER_BREAK": "시간이 아직 활성화된 간단한 카운터 버튼에 기록됩니다.",
+        "WARN_SIMPLE_COUNTER_BREAK": "활성화된 간단한 카운터 버튼에는 시간이 계속 기록됩니다.",
         "WHAT_WERE_YOU_DOING": "무엇을 하고 있었나요?"
       },
       "D_TRACKING_REMINDER": {
@@ -2315,9 +2315,9 @@
         "O": {
           "DATE": "날짜",
           "ENDED_WORKING": "종료 된 작업",
-          "ESTIMATE_AS_CLOCK": "예상 시간 (예: 5:23)",
+          "ESTIMATE_AS_CLOCK": "예상 시간을 시계 형식으로 (예: 5:23)",
           "ESTIMATE_AS_MILLISECONDS": "밀리 초로 예상",
-          "ESTIMATE_AS_STRING": "예상 시간을 문자열로 (예: 5 시간 23 분)",
+          "ESTIMATE_AS_STRING": "예상 시간을 문자열로 (예: 5시간 23분)",
           "FULL_HALF_HOURS": "30분 단위",
           "FULL_HOURS": "1시간 단위",
           "FULL_QUARTERS": "15분 단위",
@@ -2335,8 +2335,8 @@
           "WORKLOG": "작업 로그"
         },
         "OPTIONS": "옵션",
-        "ROUND_END_TIME_TO": "라운드 종료 시간:",
-        "ROUND_START_TIME_TO": "라운드 시작 시간:",
+        "ROUND_END_TIME_TO": "종료 시간 반올림 단위:",
+        "ROUND_START_TIME_TO": "시작 시간 반올림 단위:",
         "ROUND_TIME_WORKED_TO": "왕복 근무 시간",
         "SAVE_TO_FILE": "파일에 저장",
         "SEPARATE_TASKS_BY": "작업 분리",
@@ -2775,10 +2775,10 @@
       "IS_FULL_SCREEN_BLOCKER": "전체 화면 창에 메시지 표시(데스크톱 전용)",
       "IS_LOCK_SCREEN": "휴식 시간에 화면 잠금 (데스크톱에만 해당)",
       "MESSAGE": "휴식 메시지 받기",
-      "MIN_WORKING_TIME": "트리거가없는 X 작업 후 휴식 알림을받습니다.",
+      "MIN_WORKING_TIME": "휴식 알림을 받기 전 최소 작업 시간",
       "MOTIVATIONAL_IMGS": "동기 부여 이미지 (웹 URL)",
-      "NOTIFICATION_TITLE": "휴식을 취하다!",
-      "SNOOZE_TIME": "휴식을 취하라는 메시지가 표시되면 일시 중지 시간",
+      "NOTIFICATION_TITLE": "휴식을 취하세요!",
+      "SNOOZE_TIME": "휴식 알림 다시 알림 간격",
       "TITLE": "휴식 알림"
     },
     "TASKS": {
