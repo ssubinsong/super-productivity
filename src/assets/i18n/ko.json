@@ -517,6 +517,7 @@
       "S": {
         "AUTO_CREATE_FAILED": "이슈 자동 생성 실패: {{errorMsg}}",
         "CONNECTION_FAILED": "연결 실패",
+        "CONNECTION_FAILED_WITH_ERROR": "연결 실패: {{errorMsg}}",
         "CONNECTION_SUCCESS": "연결 성공!",
         "ERR_GENERIC": "{{issueProviderName}} 오류입니다: {{errTxt}}",
         "ERR_NETWORK": "{{issueProviderName}}: 클라이언트 측 네트워크 오류로 인해 요청이 실패했습니다.",
@@ -1569,6 +1570,8 @@
           "L_ENABLE_E2E_ENCRYPTION": "종단간 암호화 활성화",
           "L_ENABLE_TRACKING_PRESENCE": "다른 기기에 실시간 시간 추적 표시(실험적)",
           "TRACKING_PRESENCE_DESCRIPTION": "이 계정으로 다른 기기에서 현재 추적 중인 작업을 표시하고, 원격으로 추적을 중지할 수 있습니다. 이는 단순 표시용 정보이며 서버에 저장되지 않습니다. 서버 메모리를 거쳐 일시적으로 전달되지만, 종단 간 암호화가 켜져 있으면 서버는 그 내용을 알 수 없습니다.",
+          "L_PRESENCE_DEVICE_NAME": "다른 기기에 표시할 이 기기의 이름",
+          "PRESENCE_DEVICE_NAME_DESCRIPTION": "다른 기기의 실시간 시간 추적 표시 영역에 표시됩니다. 예를 들어 '업무용 노트북'으로 지정하면 두 컴퓨터를 구별할 수 있습니다. 시간 추적 상태와 함께 전송되며, 동기화 암호화가 켜져 있으면 암호화됩니다. 비워 두면 입력란에 안내된 플랫폼 이름을 사용합니다.",
           "L_NEW_PASSWORD": "새 암호화 비밀번호",
           "L_REMOVE_ENCRYPTION": "또는 암호화 제거",
           "L_SERVER_URL": "서버 URL",
@@ -1850,6 +1853,7 @@
         "REPEAT": "반복",
         "SCHEDULE_TASK": "작업 예약",
         "SUB_TASKS": "하위 작업 ({{nr}})",
+        "SUB_TASKS_EMPTY": "하위 작업",
         "TIME": "작업 시간",
         "TITLE_PLACEHOLDER": "제목 입력"
       },
@@ -2443,11 +2447,7 @@
       "SEARCH": "검색",
       "SYNC_BUTTON": "동기화 버튼",
       "TIME_TRACKING": "스톱워치 시간 추적",
-      "TITLE": "앱 기능",
-      "USER_PROFILES": "사용자 프로필 (실험적 — 제거될 수 있음)",
-      "USER_PROFILES_HINT": "각각 별도의 설정, 작업 및 동기화 구성을 가진 다른 사용자 프로필을 만들고 전환할 수 있습니다. 활성화하면 프로필 관리 버튼이 우측 상단에 나타납니다. 참고: 이 기능을 비활성화하면 UI가 숨겨지지만 프로필 데이터는 보존됩니다. (실험적 기능. 보증 없음. 백업을 만들어 두세요!)",
-      "EXPERIMENTAL_WARNING_TITLE": "실험적 기능",
-      "EXPERIMENTAL_WARNING_MSG": "이 기능은 실험적입니다. 버그가 있거나 크게 변경되거나 향후 업데이트에서 제거될 수 있습니다. 데이터 백업을 꼭 유지하세요.<br/><br/>활성화할까요?"
+      "TITLE": "앱 기능"
     },
     "AUTO_BACKUPS": {
       "HELP": "문제가 발생할 경우에 대비해 모든 데이터를 앱 폴더에 자동으로 저장합니다.",
@@ -2584,6 +2584,7 @@
       "TASK_ADD_ATTACHMENT": "파일 또는 링크 첨부",
       "TASK_ADD_SUB_TASK": "하위 작업 추가",
       "TASK_DELETE": "작업 삭제",
+      "TASK_DUPLICATE": "작업 복제",
       "TASK_EDIT_TAGS": "태그 편집",
       "TASK_EDIT_TITLE": "제목 수정",
       "TASK_MOVE_TO_PROJECT": "프로젝트 메뉴로 이동 작업 열기",
@@ -3078,6 +3079,7 @@
     "ALLOWED_HOSTS": "네트워크 접근",
     "ALREADY_INITIALIZED": "플러그인이 이미 초기화되었습니다",
     "AUTHORED_BY": "작성자: {{author}}",
+    "CANNOT_DELETE_INBOX": "미분류 프로젝트는 삭제할 수 없습니다",
     "CANNOT_NEST_SUBTASKS": "하위 작업을 중첩할 수 없습니다. 선택한 상위 작업이 이미 다른 작업의 하위 작업입니다",
     "CHOOSE_PLUGIN_FILE": "플러그인 파일 선택",
     "CLEAR_PLUGIN_CACHE": "플러그인 캐시 삭제",
@@ -3234,25 +3236,6 @@
     "SELECT_THEME": "테마 선택",
     "teal": "청록색",
     "yellow": "노란색"
-  },
-  "USER_PROFILES": {
-    "ACTIVE": "활성",
-    "CANCEL": "취소",
-    "CLOSE": "닫기",
-    "CREATE": "만들기",
-    "CREATE_NEW_PROFILE": "새 프로필 만들기",
-    "CREATED": "생성됨:",
-    "DELETE_PROFILE": "프로필 삭제",
-    "DIALOG_TITLE": "사용자 프로필 관리",
-    "EXISTING_PROFILES": "기존 프로필",
-    "EXPORT_PROFILE": "프로필 내보내기",
-    "MANAGE_PROFILES": "프로필 관리...",
-    "PROFILE_NAME": "프로필 이름",
-    "PROFILE_NAME_PLACEHOLDER": "예: 직장, 개인",
-    "REMOVAL_WARNING": "<strong>사용자 프로필 기능은 다음 릴리스에서 제거됩니다.</strong> 업데이트하기 전에 프로필 관리에서 모든 프로필을 내보내세요. 내보낸 파일에는 개인 데이터와 자격 증명이 포함될 수 있으므로 안전하게 보관하세요.",
-    "REMOVAL_WARNING_DISABLED": "<strong>사용자 프로필 기능은 다음 릴리스에서 제거됩니다</strong>. 추가 프로필에 아직 데이터가 저장되어 있습니다. 업데이트하기 전에 설정 → 앱 기능에서 사용자 프로필을 다시 활성화한 후 내보내세요.",
-    "RENAME": "이름 변경",
-    "SAVE": "저장"
   },
   "V": {
     "E_DATETIME": "입력한 값이 날짜/시간 형식이 아닙니다!",
