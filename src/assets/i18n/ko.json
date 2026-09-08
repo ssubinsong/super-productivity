@@ -771,7 +771,7 @@
         "TOTAL_WORK_TIME": "오늘 총 작업 시간"
       },
       "FOCUS_SESSION_DIALOG": {
-        "ADD_BTN": "더하다",
+        "ADD_BTN": "추가",
         "ADD_SESSION": "세션 추가",
         "CHART_LABEL": "집중 시간 (분)",
         "NEW_SESSION_DURATION": "시간",
@@ -1162,7 +1162,7 @@
       "VIEW_DAY": "일 보기",
       "VIEW_MONTH": "월 보기",
       "VIEW_WEEK": "주 보기",
-      "NO_TASKS": "현재 작업이 없습니다. 상단 바의 더하기(+) 버튼으로 작업을 추가해 주세요.",
+      "NO_TASKS": "현재 작업이 없습니다. 상단 바의 추가(+) 버튼으로 작업을 추가해 주세요.",
       "NOW": "지금",
       "PLAN_END_DAY": "{{date}}의 끝",
       "PLAN_START_DAY": "{{date}}의 시작",
@@ -1717,7 +1717,7 @@
       "SAFETY_BACKUP": {
         "BTN_CLEAR_ALL": "모두 삭제",
         "BTN_CREATE_MANUAL": "수동 백업 만들기",
-        "BTN_DELETE": "삭제하다",
+        "BTN_DELETE": "삭제",
         "BTN_REFRESH": "새로고침",
         "BTN_RESTORE": "복원",
         "CLEAR_FAILED": "백업 삭제 실패",
@@ -3137,7 +3137,7 @@
     "PROJECT_DOES_NOT_EXIST": "프로젝트가 존재하지 않습니다",
     "PROJECT_NOT_FOUND": "프로젝트 \"{{contextId}}\"을(를) 찾을 수 없습니다",
     "RECOMMENDATION": "신뢰할 수 있는 출처의 플러그인만 설치하고 가능하면 코드를 검토하세요. 새 플러그인을 설치하기 전에 항상 데이터를 백업하세요!",
-    "REMOVE": "제거하다",
+    "REMOVE": "제거",
     "RISK_DATA_ACCESS": "플러그인은 모든 작업, 프로젝트 및 개인 데이터를 읽고, 수정하고, 삭제할 수 있습니다",
     "RISK_MALICIOUS_CODE": "악성 플러그인은 중요한 정보를 도용하거나 데이터를 손상시킬 수 있습니다",
     "RISK_PERFORMANCE": "잘못 작성된 플러그인은 성능 문제나 충돌을 일으킬 수 있습니다",
